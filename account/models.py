@@ -9,6 +9,7 @@ class MyUser(AbstractUser):
 		verbose_name_plural="İstifadəçilər"
 	username=None
 	email=models.EmailField(_("Elektron poçt"), unique=True)
+	bio=models.TextField(verbose_name="Bioqrafiya",default="",max_length=200)
 	USERNAME_FIELD='email'
 	REQUIRED_FIELDS=[]
 

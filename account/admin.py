@@ -11,7 +11,7 @@ class CustomUserAdmin(UserAdmin):
 	model=MyUser
 	list_display=("email","is_active","is_staff","is_superuser")
 	fieldsets=(
-		(None,{"fields":("email","password")}),
+		(None,{"fields":("email","password","bio")}),
 		("İcazələr",{"fields":("is_staff","is_active","groups","user_permissions")}),
 	)
 

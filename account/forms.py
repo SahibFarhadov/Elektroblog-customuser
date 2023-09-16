@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm,BaseUserCreationForm
 from django.forms import ModelForm
 from .models import MyUser
 
@@ -19,7 +19,7 @@ class CustomUserCreationForm(UserCreationForm):
 # Admin site ucun user formlari sonu
 
 # Admin site-den kenar user formu
-class CreateUserForm(ModelForm):
+class CreateUserForm(UserCreationForm):
 	class Meta:
 		model=MyUser
-		fields=["email","password"]
+		fields=["email","password1","password2"]
